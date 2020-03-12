@@ -11,7 +11,7 @@ if (!firebase.apps.length) {
     messagingSenderId: '<replace this>'
   }
   firebase.initializeApp(config)
-  firebase.firestore().settings({ timestampsInSnapshots: true })
+  firebase.firestore()
 }
 const fireDb = firebase.firestore()
 export { fireDb }
