@@ -38,17 +38,17 @@ export default {
     }
   },
   async asyncData({ app, params, error }) {
-    const ref = fireDb.collection('test').doc('test')
+    const ref = fireDb.collection('message').doc('message')
     let snap
     try {
       snap = await ref.get()
+      return {
+      text: snap.data().message
+    }
     } catch (e) {
-      // TODO: error handling
       console.error(e)
     }
-    return {
-      text: snap.data().text
-    }
+
   },
   methods: {
     async writeToFirestore() {
