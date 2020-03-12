@@ -8,7 +8,10 @@ if (!firebase.apps.length) {
     databaseURL: '<replace this>',
     projectId: '<replace this>',
     storageBucket: '<replace this>',
-    messagingSenderId: '<replace this>'
+    messagingSenderId: '<replace this>',
+    appId: '<replace this>',
+    measurementId: '<replace this>',
+    fcmPublicVapidKey: '<replace this>'
   }
   firebase.initializeApp(config)
   firebase.firestore()
