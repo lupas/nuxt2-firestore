@@ -17,5 +17,18 @@ if (!firebase.apps.length) {
   firebase.initializeApp(config)
   firebase.firestore()
 }
+
+// TODO: THIS THROWS AN ERROR!
 const fireDb = firebase.firestore()
+fireDb.settings({
+  host: 'localhost:8080',
+  ssl: false
+})
+
+/** Same behaviour: */
+// const fireDb = firebase.firestore().settings({
+//   host: 'localhost:8080',
+//   ssl: false
+// })
+
 export { fireDb }
